@@ -1,14 +1,14 @@
 import React from "react";
 import { ScrollView, View, Text, TouchableWithoutFeedback } from "react-native";
 
-function CustomerDashboard({ navigation }) {
+function CustomerDashboard({ navigation }): JSX.Element {
     const goToStore = () => {
         navigation.navigate("Store");
     }
 
     return (
       <ScrollView horizontal={false} className="flex-1 bg-red p-4 pt-16 bg-white">
-        <TouchableWithoutFeedback onPress={() => goToStore()}>
+        <TouchableWithoutFeedback onPress={goToStore}>
             <View className="bg-gray-100 h-32 rounded-2xl p-6">
               <Text>¡Visita nuestra tienda!</Text>
             </View>

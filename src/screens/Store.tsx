@@ -14,7 +14,7 @@ function Store({ navigation }): JSX.Element {
           <Text className="text-sm text-gray-400">Categoria del negocio</Text>
         </View>
       </View>
-      <View className="p-6 pt-4 h-44 border-b-2 border-gray-100">
+      <View className="p-4 pt-4 h-44 border-b-2 border-gray-100">
         <View className="flex-row items-center gap-3">
           <View className="bg-gray-300 rounded-full h-14 w-14"></View>
           <View>
@@ -33,7 +33,7 @@ function Store({ navigation }): JSX.Element {
           </View>
         </View>
       </View>
-      <ScrollView horizontal={true} className="p-3 pl-7 pr-7 border-b-2 border-gray-100 flex-row gap-6">
+      <ScrollView horizontal={true} className="p-3 pl-5 pr-2 border-b-2 border-gray-100 flex-row gap-6">
         <Text>Principal</Text>
         <Text>Comestibles</Text>
         <Text>Bebidas</Text>
@@ -42,9 +42,9 @@ function Store({ navigation }): JSX.Element {
         <Text>Categoria</Text>
         <Text>Categoria</Text>
       </ScrollView>
-      <View className="p-7 pt-4 pb-4">
-        <Text className="text-base mb-4">Los mas buscados</Text>
-        <ScrollView horizontal={true} className="flex-row">
+      <View className="pt-4 pb-4">
+        <Text className="pl-4 text-base mb-4">Los mas buscados</Text>
+        <ScrollView horizontal={true} className="flex-row pl-4">
           <ProductItem />
           <ProductItem />
           <ProductItem />
@@ -52,9 +52,19 @@ function Store({ navigation }): JSX.Element {
           <ProductItem />
         </ScrollView>
       </View>
-      <View className="p-7 pt-4 pb-4">
-        <Text className="text-base mb-4">Productos de temporada</Text>
-        <ScrollView horizontal={true} className="flex-row">
+      <View className="pt-4 pb-4">
+        <Text className="pl-4 text-base mb-4">Productos de temporada</Text>
+        <ScrollView horizontal={true} className="flex-row pl-4">
+          <ProductItem />
+          <ProductItem />
+          <ProductItem />
+          <ProductItem />
+          <ProductItem />
+        </ScrollView>
+      </View>
+      <View className="pt-4 pb-4">
+        <Text className="pl-4 text-base mb-4">Productos de temporada</Text>
+        <ScrollView horizontal={true} className="flex-row pl-4">
           <ProductItem />
           <ProductItem />
           <ProductItem />

@@ -8,7 +8,7 @@ function Profile(): JSX.Element {
   return (
     <View>
       <Text>This is your profile</Text>
-      <Button title="Change role view" onPress={() => changeRoleView()} />
+      <Button title="Change role view" onPress={changeRoleView} />
     </View>
   );
 }
