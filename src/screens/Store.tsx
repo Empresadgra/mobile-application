@@ -1,6 +1,7 @@
 import React from "react";
 import { ScrollView, Text, TouchableWithoutFeedback, View } from "react-native";
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import { ProductItem } from "../components/ProductItem";
 
 function Store({ navigation }): JSX.Element {
   return (
@@ -13,14 +14,53 @@ function Store({ navigation }): JSX.Element {
           <Text className="text-sm text-gray-400">Categoria del negocio</Text>
         </View>
       </View>
-      <View className="p-6 h-32 border-b-2 border-gray-100">
+      <View className="p-6 pt-4 h-44 border-b-2 border-gray-100">
         <View className="flex-row items-center gap-3">
           <View className="bg-gray-300 rounded-full h-14 w-14"></View>
           <View>
-            <Text className="font-semibold">Nombre del usuario</Text>
+            <Text className="font-semibold">Daniel Garcia Batres</Text>
             <Text className="text-gray-400 text-sm">12956784</Text>
           </View>
         </View>
+        <View className="flex-row w-full h-[75%] justify-between pt-4 pb-4">
+          <View className="bg-gray-100 rounded-2xl w-full h-full max-w-[49%] flex justify-between p-2">
+            <Text className="text-sm text-gray-500">Puntos de canjeo</Text>
+            <Text className="justify-end self-end">17,892</Text>
+          </View>
+          <View className="bg-gray-100 rounded-2xl w-full h-full max-w-[49%] flex justify-between p-2">
+            <Text className="text-sm text-gray-500">Saldo disponible</Text>
+            <Text className="justify-end self-end">$28.23</Text>
+          </View>
+        </View>
+      </View>
+      <ScrollView horizontal={true} className="p-3 pl-7 pr-7 border-b-2 border-gray-100 flex-row gap-6">
+        <Text>Principal</Text>
+        <Text>Comestibles</Text>
+        <Text>Bebidas</Text>
+        <Text>Hogar</Text>
+        <Text>Categoria</Text>
+        <Text>Categoria</Text>
+        <Text>Categoria</Text>
+      </ScrollView>
+      <View className="p-7 pt-4 pb-4">
+        <Text className="text-base mb-4">Los mas buscados</Text>
+        <ScrollView horizontal={true} className="flex-row">
+          <ProductItem />
+          <ProductItem />
+          <ProductItem />
+          <ProductItem />
+          <ProductItem />
+        </ScrollView>
+      </View>
+      <View className="p-7 pt-4 pb-4">
+        <Text className="text-base mb-4">Productos de temporada</Text>
+        <ScrollView horizontal={true} className="flex-row">
+          <ProductItem />
+          <ProductItem />
+          <ProductItem />
+          <ProductItem />
+          <ProductItem />
+        </ScrollView>
       </View>
       <View className="bg-white w-20 h-20 rounded-xl absolute top-24 left-4 b-gray-600 border-2 border-gray-100"></View>
       <TouchableWithoutFeedback onPress={() => navigation.goBack()}>
