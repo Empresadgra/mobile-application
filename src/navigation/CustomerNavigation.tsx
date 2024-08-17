@@ -10,13 +10,14 @@ export function CustomerNavigation(): JSX.Element {
   return (
     <Tab.Navigator>
       <Tab.Screen
-        name="Daniel Batres"
+        name="CustomerDashboard"
         component={CustomerDashboardNavigation}
         options={{
             tabBarLabel: "Dashboard",
             tabBarIcon: ({ color, size }) => (
             <Icon name="home" color={color} size={size} />
             ),
+            headerShown: false
         }}
         />
         <Tab.Screen
