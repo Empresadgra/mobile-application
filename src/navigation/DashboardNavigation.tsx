@@ -7,10 +7,14 @@ const Stack = createStackNavigator();
 function DashboardNavigation(): JSX.Element {
   return (
     <Stack.Navigator>
-      <Stack.Screen name='Negocio' component={Dashboard} options={{
-        title: "",
-        headerTransparent: true
-      }}/>
+      <Stack.Screen
+        name="BusinessMain"
+        component={Dashboard}
+        options={{
+          title: "",
+          headerTransparent: true,
+        }}
+      />
     </Stack.Navigator>
   );
 }

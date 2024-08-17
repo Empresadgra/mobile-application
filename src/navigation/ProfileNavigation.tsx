@@ -8,7 +8,7 @@ function ProfileNavigation(): JSX.Element {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Profile"
+        name="UserProfileScreen"
         component={Profile}
         options={{
           title: "",
