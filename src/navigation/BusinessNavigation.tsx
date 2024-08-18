@@ -1,6 +1,6 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import Icon from 'react-native-vector-icons/Feather';
 import { DashboardNavigation } from "./DashboardNavigation";
 import { ProfileNavigation } from "./ProfileNavigation";
 

@@ -1,11 +1,11 @@
 import React from "react";
 import { ScrollView, Text, TouchableWithoutFeedback, View } from "react-native";
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import Icon from 'react-native-vector-icons/Feather';
 import { ProductItem } from "../components/ProductItem";
 
 function Store({ navigation }): JSX.Element {
   return (
-    <ScrollView className="pt-12 bg-white flex-1 relative">
+    <ScrollView showsVerticalScrollIndicator={false} showsHorizontalScrollIndicator={false} className="pt-12 bg-white flex-1 relative">
       <View className="bg-gray-300 h-28"></View>
       <View className="h-24  border-b-2 border-gray-100 flex-row">
         <View className="w-24"></View>
@@ -33,7 +33,7 @@ function Store({ navigation }): JSX.Element {
           </View>
         </View>
       </View>
-      <ScrollView horizontal={true} className="p-3 pl-5 pr-2 border-b-2 border-gray-100 flex-row gap-6">
+      <ScrollView horizontal={true} showsVerticalScrollIndicator={false} showsHorizontalScrollIndicator={false} className="p-3 pl-5 pr-2 border-b-2 border-gray-100 flex-row gap-6">
         <Text>Principal</Text>
         <Text>Comestibles</Text>
         <Text>Bebidas</Text>
@@ -44,7 +44,7 @@ function Store({ navigation }): JSX.Element {
       </ScrollView>
       <View className="pt-4 pb-4">
         <Text className="pl-4 text-base mb-4">Los mas buscados</Text>
-        <ScrollView horizontal={true} className="flex-row pl-4">
+        <ScrollView horizontal={true} showsVerticalScrollIndicator={false} showsHorizontalScrollIndicator={false} className="flex-row pl-4">
           <ProductItem />
           <ProductItem />
           <ProductItem />
@@ -54,7 +54,7 @@ function Store({ navigation }): JSX.Element {
       </View>
       <View className="pt-4 pb-4">
         <Text className="pl-4 text-base mb-4">Productos de temporada</Text>
-        <ScrollView horizontal={true} className="flex-row pl-4">
+        <ScrollView horizontal={true} showsVerticalScrollIndicator={false} showsHorizontalScrollIndicator={false} className="flex-row pl-4">
           <ProductItem />
           <ProductItem />
           <ProductItem />
@@ -64,7 +64,7 @@ function Store({ navigation }): JSX.Element {
       </View>
       <View className="pt-4 pb-4">
         <Text className="pl-4 text-base mb-4">Productos de temporada</Text>
-        <ScrollView horizontal={true} className="flex-row pl-4">
+        <ScrollView horizontal={true} showsVerticalScrollIndicator={false} showsHorizontalScrollIndicator={false} className="flex-row pl-4">
           <ProductItem />
           <ProductItem />
           <ProductItem />
@@ -75,7 +75,7 @@ function Store({ navigation }): JSX.Element {
       <View className="bg-white w-20 h-20 rounded-xl absolute top-24 left-4 b-gray-600 border-2 border-gray-100"></View>
       <TouchableWithoutFeedback onPress={() => navigation.goBack()}>
         <View className="absolute top-4 left-4 bg-white h-10 w-10 rounded-lg flex justify-center items-center">
-          <Icon name="angle-left" size={22} color="black"/>
+          <Icon name="chevron-left" size={22} color="black"/>
         </View>
       </TouchableWithoutFeedback>
     </ScrollView>
