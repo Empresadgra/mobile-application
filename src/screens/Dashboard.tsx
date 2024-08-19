@@ -8,7 +8,7 @@ import {
 import { ActionButton } from '../components/ActionButton';
 import { StatisticCard } from '../components/StatisticCard';
 
-function Dashboard(): JSX.Element {
+function Dashboard({ navigation }): JSX.Element {
   return (
     <View className="p-2 h-full bg-white">
       <TextInput
@@ -31,7 +31,7 @@ function Dashboard(): JSX.Element {
       </ScrollView>
       <View className="flex-row w-full mt-4 mb-4 max-h-[15%] justify-between">
         <ActionButton />
-        <ActionButton />
+        <ActionButton navigation={navigation} />
       </View>
     </View>
   );
