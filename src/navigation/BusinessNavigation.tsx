@@ -19,10 +19,15 @@ function BusinessNavigation(): JSX.Element {
           ),
         }}
       />
-      <Tab.Screen name="UserProfile"component={ProfileNavigation}options={{tabBarLabel: "Profile",
+      <Tab.Screen 
+        name="UserProfile"
+        component={ProfileNavigation}
+        options={{tabBarLabel: "Profile",
           tabBarIcon: ({ color, size }) => (
             <Icon name="user"color={color}size={size} />
-          )
+          ),
+          title: "",
+          headerTransparent: true
         }}
       />
     </Tab.Navigator>
