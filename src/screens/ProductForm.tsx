@@ -3,7 +3,7 @@ import { Text, TextInput, View } from 'react-native';
 
 function ProductForm(): JSX.Element {
   return (
-    <View>
+    <View className="bg-white p-2">
       <Text className="text-lg font-semibold">Informacion del producto</Text>
       <Text className="text-gray-400 text-xs">Edita la informacion del producto para darle una buena imagen a tus clientes</Text>
       <View className="pt-4 pb-4">

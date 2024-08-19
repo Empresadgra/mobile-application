@@ -2,9 +2,13 @@ import React from "react";
 import Icon from 'react-native-vector-icons/Feather';
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import useAuth from "../hooks/useAuth";
+import { ProfileOption } from "../components/ProfileOption";
 
 function Profile(): JSX.Element {
-  const { isCustomer, changeRoleView } = useAuth();
+  const { 
+    isCustomer, 
+    changeRoleView 
+  } = useAuth();
 
   return (
     <ScrollView horizontal={false} showsVerticalScrollIndicator={false} className="pt-14 bg-white">
@@ -15,36 +19,9 @@ function Profile(): JSX.Element {
           <Text className="text-sm text-gray-400">Codigo de usuario: 189289</Text>
         </View>
       </View>
-      <TouchableOpacity className="flex-row justify-between items-center p-4 pt-7 pb-7 border-b-2 border-gray-100">
-        <View className="flex-row items-center">
-          <Icon name="user" size={24} color="black" />
-          <View className="pl-3">
-            <Text className="text-lg">Informacion personal</Text>
-            <Text className="text-xs text-gray-400">Edita tu informacion personal</Text>
-          </View>
-        </View>
-        <Icon name="chevron-right" size={24} color="black" />
-      </TouchableOpacity>
-      <TouchableOpacity className="flex-row justify-between items-center p-4 pt-7 pb-7 border-b-2 border-gray-100">
-        <View className="flex-row items-center">
-          <Icon name="settings" size={24} color="black" />
-          <View className="pl-3">
-            <Text className="text-lg">Configuracion general</Text>
-            <Text className="text-xs text-gray-400">Selecciona tus preferencias para la aplicacion</Text>
-          </View>
-        </View>
-        <Icon name="chevron-right" size={24} color="black" />
-      </TouchableOpacity>
-      <TouchableOpacity className="flex-row justify-between items-center p-4 pt-7 pb-7 border-b-2 border-gray-100" onPress={changeRoleView}>
-        <View className="flex-row items-center">
-          <Icon name="copy" size={24} color="black" />
-          <View className="pl-3">
-            <Text className="text-lg">Cambiar a vista de {!isCustomer ? "cliente" : "empleado"}</Text>
-            <Text className="text-xs text-gray-400">Intercambiar rol de plataforma</Text>
-          </View>
-        </View>
-        <Icon name="repeat" size={24} color="black" />
-      </TouchableOpacity>
+      <ProfileOption iconName="user" optionName="Infomacion personal" optionMessage="Edita tu informacion personal" />
+      <ProfileOption iconName="settings" optionName="Configuracion general" optionMessage="Selecciona tus preferencias para la aplicacion" />
+      <ProfileOption iconName="copy" lastIconName="repeat" optionName={`Cambiar a vista de ${!isCustomer ? "cliente" : "empleado"}`} onPressOption={changeRoleView} optionMessage="Intercambiar rol de plataforma" />
     </ScrollView>
   );
 }
