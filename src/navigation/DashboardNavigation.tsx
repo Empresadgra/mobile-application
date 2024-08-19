@@ -1,6 +1,7 @@
 import React from 'react';
 import  { createStackNavigator } from "@react-navigation/stack";
 import { Dashboard } from '../screens/Dashboard';
+import { ProductForm } from "../screens/ProductForm";
 
 const Stack = createStackNavigator();
 
@@ -14,6 +15,10 @@ function DashboardNavigation(): JSX.Element {
           title: "",
           headerTransparent: true,
         }}
+      />
+      <Stack.Screen 
+        name="ProductData"
+        component={ProductForm}
       />
     </Stack.Navigator>
   );
