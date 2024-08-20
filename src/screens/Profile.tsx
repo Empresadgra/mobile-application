@@ -1,6 +1,5 @@
 import React from "react";
-import Icon from 'react-native-vector-icons/Feather';
-import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 import useAuth from "../hooks/useAuth";
 import { ProfileOption } from "../components/ProfileOption";
 
