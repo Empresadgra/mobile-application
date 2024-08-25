@@ -6,6 +6,7 @@ import { CustomerDashboardNavigation } from "./CustomerDashboardNavigation";
 import { SearchNavigation } from "./SearchNavigation";
 import { ProfileNavigation } from "./ProfileNavigation";
 import { PurchaseHistoryNavigation } from "./PurchaseHistoryNavigation";
+import { Invoice } from "../screens/Invoice";
 
 const Tab = createBottomTabNavigator();
 const { width } = Dimensions.get('window');
@@ -73,7 +74,10 @@ function CustomTabBar({ state, descriptors, navigation }) {
           case 'UserProfile':
             iconName = 'user';
             break;
-          default:
+          case 'NewInvoice':
+            iconName= 'shopping-cart';
+            break;
+          default: 
             iconName = 'circle';
             break;
         }
@@ -114,12 +118,16 @@ export function CustomerNavigation(): JSX.Element {
         component={SearchNavigation}
       />
       <Tab.Screen
+        name="UserProfile" 
+        component={ProfileNavigation}
+      />
+      <Tab.Screen
         name="Purchase"
         component={PurchaseHistoryNavigation}
       />
-      <Tab.Screen
-        name="UserProfile" 
-        component={ProfileNavigation}
+      <Tab.Screen 
+        name="NewInvoice"
+        component={Invoice}
       />
     </Tab.Navigator>
   );

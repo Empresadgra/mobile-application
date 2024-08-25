@@ -8,7 +8,7 @@ interface InvoiceProperties {
 
 function Invoice(): JSX.Element {
   return (
-    <View className="bg-white">
+    <View className="bg-white h-full pt-12">
       <Text>Realizar una nueva factura</Text>
       <Text>Ingresa los productos para realizar la factura</Text>
       <TouchableOpacity activeOpacity={0.7} className="bg-black p-2 rounded-2xl w-full flex-row items-center justify-center">

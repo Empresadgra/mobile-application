@@ -7,15 +7,7 @@ import { BusinessNavigation } from "./BusinessNavigation";
 const Tab = createBottomTabNavigator();
 
 export default function Navigation(): JSX.Element {
-  const { isCustomer } = useAuth();
-
-  if (isCustomer) {
-    return (
-      <CustomerNavigation />
-    );
-  } else {
-    return (
-      <BusinessNavigation />
-    );
-  }
+  return (
+    <CustomerNavigation />
+  );
 }

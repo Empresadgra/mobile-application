@@ -10,7 +10,7 @@ import { StatisticCard } from '../components/StatisticCard';
 
 function Dashboard({ navigation }): JSX.Element {
   return (
-    <View className="p-2 h-full bg-white">
+    <ScrollView className="p-2 pt-16 h-full bg-white">
       <TextInput
         placeholder="Buscar productos, secciones y mas"
         autoCapitalize="none"
@@ -23,17 +23,17 @@ function Dashboard({ navigation }): JSX.Element {
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
-        className="flex max-h-[25%]"
+        className="flex h-40"
       >
         <StatisticCard />
         <StatisticCard />
         <StatisticCard />
       </ScrollView>
       <View className="flex-row w-full mt-4 mb-4 max-h-[15%] justify-between">
-        <ActionButton />
-        <ActionButton navigation={navigation} />
+        <ActionButton navigation={navigation} navigate="NewInvoice" />
+        <ActionButton navigation={navigation} navigate="ProductData" />
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
