@@ -5,6 +5,7 @@ export type RootStackParamList = {
   ProductData: undefined;
   NewInvoice: undefined;
   ShowProduct: undefined;
+  Confirm: undefined;
 }
 
 export interface NavigationProperties {

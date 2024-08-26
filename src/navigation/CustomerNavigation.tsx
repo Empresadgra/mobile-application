@@ -6,7 +6,7 @@ import { CustomerDashboardNavigation } from "./CustomerDashboardNavigation";
 import { SearchNavigation } from "./SearchNavigation";
 import { ProfileNavigation } from "./ProfileNavigation";
 import { PurchaseHistoryNavigation } from "./PurchaseHistoryNavigation";
-import { Invoice } from "../screens/Invoice";
+import { InvoiceNavigation } from "./InvoiceNavigation";
 
 const Tab = createBottomTabNavigator();
 const { width } = Dimensions.get('window');
@@ -23,7 +23,13 @@ function CustomTabBar({ state, descriptors, navigation }) {
   }, [state.index]);
 
   return (
-    <View style={{ flexDirection: 'row', height: 60, backgroundColor: 'white' }}>
+    <View style={{ 
+      flexDirection: 'row',
+      height: 60, 
+      backgroundColor: 'white',
+      borderTopWidth: 1,
+      borderTopColor: "#f3f4f6",
+    }}>
       <Animated.View
         style={{
           position: 'absolute',
@@ -127,7 +133,7 @@ export function CustomerNavigation(): JSX.Element {
       />
       <Tab.Screen 
         name="NewInvoice"
-        component={Invoice}
+        component={InvoiceNavigation}
       />
     </Tab.Navigator>
   );
